@@ -11,7 +11,7 @@ import java.net.Socket;
  * @date 2017/8/25
  */
 public class TcpServer {
-    public static final int PORT = 8083;//监听的端口号
+    public static final int PORT = 8084;//监听的端口号
 
     public static void main(String[] args) {
         System.out.println("服务器启动...\n");

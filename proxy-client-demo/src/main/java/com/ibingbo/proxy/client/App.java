@@ -1,4 +1,4 @@
-package com.ibingbo;
+package com.ibingbo.proxy.client;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
@@ -16,8 +16,8 @@ import java.net.URLConnection;
 public class App {
     public static void main(String[] args) {
         // http代理设置
-        System.setProperty("http.proxyHost", "10.99.192.200");
-        System.setProperty("http.proxyPort", "8084");
+        System.setProperty("http.proxyHost", "127.0.0.1");
+        System.setProperty("http.proxyPort", "8081");
 
         // https代理设置
         //        System.setProperty("https.proxyHost", "10.99.192.200");
@@ -28,8 +28,8 @@ public class App {
         //        System.setProperty("ftp.proxyPort", "");
         //
         // tcp代理设置
-        System.setProperty("socksProxyHost", "10.99.192.200");
-        System.setProperty("socksProxyPort", "8084");
+        System.setProperty("socksProxyHost", "127.0.0.1");
+        System.setProperty("socksProxyPort", "8083");
 
         try {
             String[] urls = new String[] {
@@ -62,7 +62,7 @@ public class App {
             Socket socket = null;
             try {
                 //创建一个流套接字并将其连接到指定主机上的指定端口号
-                socket = new Socket("10.99.192.200", 8083);
+                socket = new Socket("127.0.0.1", 8083);
 
                 //读取服务器端数据
                 DataInputStream input = new DataInputStream(socket.getInputStream());

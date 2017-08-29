@@ -3,7 +3,9 @@ package com.ibingbo.proxy.core;
 import com.ibingbo.proxy.core.http.HttpProxy;
 import com.ibingbo.proxy.core.http.HttpProxyBuilder;
 import com.ibingbo.proxy.core.http.handler.HttpProxyHandler;
+import com.ibingbo.proxy.core.tcp.SocketProxy;
 import com.ibingbo.proxy.core.tcp.TcpProxyBuilder;
+import com.ibingbo.proxy.core.tcp.handler.DefaultTcpProxyHandler;
 import com.ibingbo.proxy.core.tcp.handler.TcpProxyHandler;
 
 /**
@@ -21,5 +23,7 @@ public class App {
                 .bufferSize(1024)
                 .build()
                 .startProxy(8082, TcpProxyHandler.class);
+
+        new SocketProxy().startProxy(8083, DefaultTcpProxyHandler.class);
     }
 }
