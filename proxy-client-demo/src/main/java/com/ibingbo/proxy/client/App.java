@@ -33,7 +33,7 @@ public class App {
 
         try {
             String[] urls = new String[] {
-                    "http://cp01-hotel-04.epc.baidu.com:8063"
+                    "http://www.ibingbo.com:8063"
             };
             for (String uri : urls) {
                 URL url = new URL(uri);
